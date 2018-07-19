@@ -14,7 +14,7 @@
 	  	    label="password"
 	  	    v-model="password"
 	  	  ></v-text-field>
-	  	  <v-btn color="blue lighten-4">Success</v-btn>
+	  	  <v-btn class="cyan white--text subheading font-weight-regular">Register</v-btn>
 	  	  </div>
 		  </div>
 		</v-flex>
