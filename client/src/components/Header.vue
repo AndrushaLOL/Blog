@@ -1,6 +1,7 @@
 <template>
 	<v-toolbar color="primary" fixed>
-	  <v-toolbar-title class='cyan--text' to="HelloWorld.vue">
+		<v-toolbar-side-icon></v-toolbar-side-icon>
+	  <v-toolbar-title class='white--text' to="HelloWorld.vue">
 	    Blog
 	  </v-toolbar-title>
 	  <v-spacer></v-spacer>

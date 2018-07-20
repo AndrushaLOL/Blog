@@ -25,7 +25,7 @@ module.exports = {
  					break
  				default:
  					res.status(400).send({
- 						message: 'server error'
+ 						message: req.body
  					})
  			}
 

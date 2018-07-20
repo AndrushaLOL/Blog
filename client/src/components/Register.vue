@@ -2,7 +2,7 @@
 	<v-layout row>
 		<v-flex xs6 offset-xs3>
 		  <div class='white elevation-2'>
-		  	<v-toolbar flat dense class = "cyan" dark>
+		  	<v-toolbar flat dense class = "blue lighten-1" dark>
 		  	  <v-toolbar-title>Register</v-toolbar-title>
 		  	</v-toolbar>
 	  	  <div class="pl-4 pr-4">
@@ -14,7 +14,7 @@
 	  	    label="password"
 	  	    v-model="password"
 	  	  ></v-text-field>
-	  	  <v-btn class="cyan white--text subheading font-weight-regular">Register</v-btn>
+	  	  <v-btn class="blue lighten-1 white--text" @click="Register()">Register</v-btn>
 	  	  </div>
 		  </div>
 		</v-flex>
