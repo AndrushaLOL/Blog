@@ -8,17 +8,26 @@
     </v-container>
   </v-content>
   <v-footer app></v-footer>
-  </v-app>  
+  </v-app>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
+import BackendLess from 'backendless'
 
 export default {
   name: 'App',
   components: {
     Header
+  },
+  mounted () {
+    BackendLess.UserService.getCurrentUser()
+      .then((user) => {
+        if (user) {
+          this.$router.push({name: "Login"})
+        }
+      })
   }
 }
 </script>

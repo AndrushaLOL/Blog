@@ -1,9 +1,9 @@
 <template>
 	<v-toolbar color="primary" fixed>
-		<v-toolbar-side-icon></v-toolbar-side-icon>
 	  <v-toolbar-title class='white--text' to="HelloWorld.vue">
-	    Blog
+      <router-link to="/"><span class="white--text">Blog</span></router-link>
 	  </v-toolbar-title>
+    <v-btn to="/posts" class="info" flat >Browse</v-btn>
 	  <v-spacer></v-spacer>
 	  <v-toolbar-items>
 	    <v-btn color="white" to="Login" flat>Login</v-btn>
