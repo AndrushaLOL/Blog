@@ -3,13 +3,13 @@ const bcrypt = Promise.promisifyAll(require('bcrypt-nodejs'))
 
 function hashPassword (user, options) {
 	const SALT_POWER = 8
-
+	console.log('Hashing')
 	if (!user.changed('password')) {
 		return
 	}
 
 	return bcrypt
-			.getSaltAsync(SALT_POWER)
+			.genSaltAsync(SALT_POWER)
 			.then(salt => bcrypt.hashAsync(user.password, salt, null))
 			.then(hash => {
 				user.setDataValue('password', hash)

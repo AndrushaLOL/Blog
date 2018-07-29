@@ -14,18 +14,27 @@
 
 <script>
 import Header from '@/components/Header'
+import Posts from '@/components/Posts'
 import BackendLess from 'backendless'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Posts
+  },
+  data: {
+    user: null
   },
   mounted () {
     BackendLess.UserService.getCurrentUser()
       .then((user) => {
-        if (user) {
+        this.user = user
+        if (!user) {
           this.$router.push({name: "Login"})
+        } else {
+
+          this.$router.push({name: "Posts"})
         }
       })
   }

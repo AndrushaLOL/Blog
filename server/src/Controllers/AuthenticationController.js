@@ -16,7 +16,7 @@ module.exports = {
 		res.send(user.toJSON())
 		} catch (err) {
 			res.status(400).send({
-				error: 'This email already use'
+				error: 'This email already in use'
 			})
 		}
 
